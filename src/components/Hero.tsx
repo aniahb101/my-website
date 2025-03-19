@@ -1,5 +1,5 @@
 
-import { ArrowDown, GitHub, Linkedin } from 'lucide-react';
+import { ArrowDown, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import AnimatedSection from './AnimatedSection';
 
@@ -55,7 +55,7 @@ const Hero = () => {
                   aria-label="GitHub"
                   className="text-foreground/80 hover:text-foreground transition-colors"
                 >
-                  <GitHub className="h-6 w-6" />
+                  <Github className="h-6 w-6" />
                 </a>
                 <a
                   href="https://linkedin.com"
