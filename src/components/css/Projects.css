@@ -1,0 +1,159 @@
+/* Container for the Projects section */
+.projects-section {
+  padding: 4rem 1rem;
+  background-color: #f0f4f8; /* Light background; adjust as needed */
+}
+
+/* Inner container to center content */
+.projects-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading styles */
+.projects-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.projects-subtitle {
+  font-size: 1.125rem;
+  color: #6c757d;
+}
+
+/* Tabs styles */
+.projects-tab-list-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.projects-tab-list {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #e9ecef;
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+}
+
+.projects-tab-trigger {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.projects-tab-trigger:hover,
+.projects-tab-trigger[aria-selected="true"] {
+  background-color: #17bb4f;
+  border-radius: 9999px;
+}
+
+/* Grid layout for project cards */
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Project Card Styles */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Button styles inside project cards */
+.project-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.project-btn-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Footer styles */
+.projects-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.projects-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+}
+
+.projects-footer-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}

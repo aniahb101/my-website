@@ -1,0 +1,202 @@
+/* Container */
+.about-section {
+    padding: 4rem 1rem;
+  }
+  
+  .about-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Grid layout for photo and info */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Photo container */
+  .photo-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .photo-wrapper {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .about-photo {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Experience badge */
+  .experience-badge {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+    background: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .exp-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0;
+  }
+  
+  .exp-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin: 0;
+  }
+  
+  /* Info container */
+  .info-container {
+    padding: 1rem;
+  }
+  
+  .info-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .info-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  /* Stats */
+  .stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-card {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 0.25rem;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  /* Badges */
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .badge {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+  }
+  
+  /* Skills section */
+  .skills-section {
+    margin-top: 3rem;
+  }
+  
+  .skills-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .skills-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .skill-group {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .skill-group-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+  }
+  
+  .skill-name {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .skill-level {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  .skill-progress {
+    height: 0.5rem;
+  }
+  

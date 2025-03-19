@@ -1,0 +1,144 @@
+/* Navbar.css */
+
+/* Base navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+  padding: 1rem 0; /* base padding */
+}
+
+.navbar.transparent {
+  background: transparent;
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 0; /* reduced padding when scrolled */
+}
+
+/* Container */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Inner flex container */
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.navbar-logo {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-logo span {
+  color: hwb(133 3% 60%); /* primary color */
+}
+
+/* Desktop navigation */
+.navbar-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+/* Navbar links */
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #000;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Desktop button */
+.navbar-btn {
+  border-radius: 9999px;
+}
+
+/* Mobile menu button */
+.navbar-mobile-button {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navbar-mobile-button {
+    display: none;
+  }
+}
+
+/* Icon size */
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Mobile navigation menu */
+.navbar-mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-mobile-menu.open {
+  max-height: 16rem; /* open state height */
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-mobile-menu.closed {
+  max-height: 0;
+}
+
+/* Mobile navigation links */
+.navbar-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.navbar-mobile-link {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-mobile-link:hover {
+  color: #000;
+}
+
+.navbar-mobile-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 9999px;
+}

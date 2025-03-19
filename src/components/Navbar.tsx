@@ -1,8 +1,8 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import '../components/css/Navbar.css';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -17,11 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -37,44 +33,35 @@ const Navbar = () => {
   };
 
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4',
-        isScrolled ? 'blur-backdrop py-3' : 'bg-transparent'
-      )}
-    >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between">
-          <a href="#home" className="text-foreground font-medium text-xl">
-            <span className="text-primary">Dev</span>Portfolio
+    <header className={cn('navbar', isScrolled ? 'scrolled' : 'transparent')}>
+      <div className="navbar-container">
+        <div className="navbar-inner">
+          <a href="#home" className="navbar-logo">
+            <span>Aniah</span>Portfolio
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="navbar-nav">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-foreground/80 hover:text-foreground transition-colors link-underline py-1"
-              >
+              <a key={link.name} href={link.href} className="navbar-link">
                 {link.name}
               </a>
             ))}
-            <Button asChild className="rounded-full">
+            <Button asChild className="navbar-btn">
               <a href="#contact">Let's Talk</a>
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="navbar-mobile-button"
             onClick={handleMobileMenuToggle}
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="icon" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="icon" />
             )}
           </button>
         </div>
@@ -82,23 +69,20 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={cn(
-          'md:hidden blur-backdrop absolute top-full left-0 right-0 overflow-hidden transition-all duration-300 ease-in-out',
-          mobileMenuOpen ? 'max-h-64 border-b border-border/50' : 'max-h-0'
-        )}
+        className={cn('navbar-mobile-menu', mobileMenuOpen ? 'open' : 'closed')}
       >
-        <nav className="flex flex-col space-y-4 p-4">
+        <nav className="navbar-mobile-nav">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-foreground/80 hover:text-foreground py-2 transition-colors"
+              className="navbar-mobile-link"
               onClick={handleNavLinkClick}
             >
               {link.name}
             </a>
           ))}
-          <Button asChild className="w-full rounded-full mt-2">
+          <Button asChild className="navbar-mobile-btn">
             <a href="#contact" onClick={handleNavLinkClick}>
               Let's Talk
             </a>
