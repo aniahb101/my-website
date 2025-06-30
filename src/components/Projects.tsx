@@ -10,6 +10,7 @@ import aroundImg from '@/components/photos/around.png';
 import flowerbedImg from '@/components/photos/flowerbed.png';
 import wtwrImg from '@/components/photos/wtwr.jpg';
 import newsImg from '@/components/photos/newsexplorer.png';
+import wtwrCliImg from '@/components/photos/wtwr-cli.png'; 
 
 import '../components/css/Projects.css'; 
 
@@ -81,6 +82,18 @@ const projects = [
       'https://github.com/aniahb101/news-explorer-frontend/tree/stage-1',
     category: 'frontend',
   },
+
+{
+  id: 6,
+  title: 'WTWR CLI (C++ Weather Recommender)',
+  description:
+    'Command-line version of my WTWR app built in C++. Auto-detects location, fetches real-time weather, and suggests outfits.',
+  image: wtwrCliImg,
+  tags: ['C++', 'libcurl', 'OpenWeather API', 'JSON'],
+  liveUrl: 'https://github.com/aniahb101/wtwr-cli-cpp#readme',
+  githubUrl: 'https://github.com/aniahb101/wtwr-cli-cpp',
+  category: 'backend',
+},
 ]
 
 
